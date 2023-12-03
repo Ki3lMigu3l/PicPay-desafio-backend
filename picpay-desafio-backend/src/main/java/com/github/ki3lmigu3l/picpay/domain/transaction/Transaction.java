@@ -8,8 +8,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@Entity
-@Table(name = "transactions")
+@Entity(name = "transactions")
+@Table(name = "transactions_tb")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -18,7 +18,7 @@ import java.util.UUID;
 public class Transaction {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private BigDecimal amount;
 
